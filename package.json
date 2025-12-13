@@ -14,6 +14,7 @@
     },
     "homepage": "https://github.com/phaserjs/template-vite-ts#readme",
     "scripts": {
+        "force-dev": "vite --force --config vite/config.dev.mjs",
         "dev": "vite --config vite/config.dev.mjs",
         "build": "vite build --config vite/config.prod.mjs",
         "test": "vitest --run src/**/*.test.ts"
