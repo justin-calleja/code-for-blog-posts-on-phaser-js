@@ -1,3 +1,5 @@
+import { defaultBtn, hoverBtn, pressedBtn } from "../../assetKeys";
+
 export class Preloader extends Phaser.Scene {
   constructor() {
     super("Preloader");
@@ -17,7 +19,13 @@ export class Preloader extends Phaser.Scene {
     });
   }
 
-  preload() {}
+  preload() {
+    this.load.setPath("assets");
+
+    this.load.image(pressedBtn, "button_rectangle_depth_flat.png");
+    this.load.image(hoverBtn, "button_rectangle_depth_gloss.png");
+    this.load.image(defaultBtn, "button_rectangle_depth_gradient.png");
+  }
 
   create() {
     //  When all the assets have loaded, it's often worth creating global objects here that the rest of the game can use.
